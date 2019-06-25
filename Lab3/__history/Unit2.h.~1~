@@ -1,0 +1,16 @@
+// ---------------------------------------------------------------------------
+
+#ifndef Unit2H
+#define Unit2H
+#include <StdCtrls.hpp>
+// ---------------------------------------------------------------------------
+
+class Storage {
+private:
+	int number, price;
+	String name, date;
+
+};
+#endif
+
+

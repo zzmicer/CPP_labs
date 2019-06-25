@@ -1,0 +1,21 @@
+// ---------------------------------------------------------------------------
+
+#pragma hdrstop
+#include <vcl.h>
+#include "stack.h"
+// ---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+template<typename T>
+Stack<T>::Stack() {
+	size = 0;
+}
+
+template<typename T>
+Stack<T>::Push() {
+	if (size == 100) {
+		ShowMessage("Стэк переполнен");
+		return 1;
+	}
+
+}

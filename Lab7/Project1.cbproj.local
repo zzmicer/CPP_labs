@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.934,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab7\hash.cpp=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab7\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.817,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab7\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.533,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.743,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab7\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.626,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab7\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.888,=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab7\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.626,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab7\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.896,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.158,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.686,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.934,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab7\hash.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab7\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.626,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab7\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

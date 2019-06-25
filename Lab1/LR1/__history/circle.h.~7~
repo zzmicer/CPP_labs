@@ -1,0 +1,27 @@
+// ---------------------------------------------------------------------------
+
+#ifndef circleH
+#define circleH
+#include "shape.h"
+#include "math.h"
+
+// ---------------------------------------------------------------------------
+#endif
+
+class Circl : public shape {
+	int x, y, r;
+
+public:
+	int X, Y;
+
+	Circl(int, int, int);
+	Circl();
+	void show(TCanvas *Canvas);
+	void clear(TCanvas *Canvas);
+	int getx();
+	int gety();
+	int getr();
+	void spin(TCanvas *Canvas, int, int, int, int, int, float);
+	void cspin(TCanvas *Canvas, int, int, int, int, int, float);
+	void centre(TCanvas *Canvas, int, int, int, int, int, float);
+};

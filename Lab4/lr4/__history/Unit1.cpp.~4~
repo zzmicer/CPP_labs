@@ -1,0 +1,108 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "Class.h"
+#include <cstdlib>
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+Calculation *Calc;
+Calculation *Calc1;
+Calculation *Calc2;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+TLabel *lbl1;
+TLabel *lbl2;
+
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+	if (Edit1->Text != "") {
+		lbl2->Caption = "";
+		String str = Edit1->Text;
+		wchar_t *p = (wchar_t *)str.c_str();
+		Calc = new Calculation(p);
+		Calc->Transformation();
+		Edit2->Text = Calc->postfixStr;
+		lbl1 = new TLabel(Panel2);
+		lbl1->Parent = Panel2;
+		lbl1->Caption="Перевод осуществлен удачно.";
+		lbl1->Top=7;
+		lbl1->Left=310;
+		lbl1->Height = 16;
+		lbl1->Font->Size = 10;
+	}
+	else {
+		throw Exception("Строка не должна быть пустой!");
+	}
+}
+
+
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+	if (Edit2->Text != "") {
+		lbl1->Caption = "";
+		lbl2->Caption = "";
+		Calc1 = new Calculation();
+		String str1 = Edit2->Text;
+		wchar_t *post = (wchar_t *)str1.c_str();
+		Calc1->calculate(post);
+		if (Calc1->modif == true) {
+			Edit3->Text = FloatToStr(Calc1->result);
+		}
+		else {
+			Edit3->Text = "Невозможно вычислить результат";
+        }
+
+	}
+	else {
+		throw Exception("Строка не должна быть пустой!");
+	}
+}
+//---------------------------------------------------------------------------
+
+
+
+
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+	if (Edit2->Text != "") {
+		lbl1->Caption = "";
+		Calc2 = new Calculation();
+		String str2 = Edit2->Text;
+		wchar_t *temp = (wchar_t *)str2.c_str();
+		Calc2->decoding(temp);
+		Edit1->Text = Calc2->TransletadeToInfix;
+		lbl2 = new TLabel(Panel1);
+		lbl2->Parent = Panel1;
+		lbl2->Caption="Перевод осуществлен удачно.";
+		lbl2->Top=7;
+		lbl2->Left=310;
+		lbl2->Height = 16;
+		lbl2->Font->Size = 10;
+	}
+	else {
+		throw Exception("Строка не должна быть пустой!");
+	}
+
+}
+//---------------------------------------------------------------------------
+TButton *bttn;
+
+void __fastcall TForm1::Button4Click(TObject *Sender)
+{
+	Form1->Close();
+}
+//---------------------------------------------------------------------------
+

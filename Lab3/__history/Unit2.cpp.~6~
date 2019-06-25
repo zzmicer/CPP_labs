@@ -1,0 +1,49 @@
+// ---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Unit2.h"
+
+List::List() {
+	size = 0;
+	head = NULL;
+}
+
+void List::push_back(int data) {
+	if (head == NULL)
+		head = new Node(data);
+	else {
+		Node *current = this->head;
+		while (current->pNext != NULL) {
+			current = current->pNext;
+		}
+
+		current->pNext = new Node(data);
+	}
+	size++;
+}
+
+void List::pop_index(int index){
+	counter = 0;
+	Node *current = this->head;
+
+
+
+
+}
+
+int &List:: operator[](const int index) {
+	int counter = 0;
+	Node *current = this->head;
+
+	while (current != NULL) {
+		if (counter == index)
+			return current->data;
+		current = current->pNext;
+		counter++;
+	}
+
+}
+
+// ---------------------------------------------------------------------------
+#pragma package(smart_init)

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.413,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.925,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\stack.cpp=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.843,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.399,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab4\lr4\Unit1.cpp=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.399,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab4\lr4\Unit1.h=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.100,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab4\lr4\Project1PCH1.h=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.925,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\stack.h=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.569,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.223,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab4\lr4\Project1.cbproj=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.492,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab4\lr4\stack.h=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\stack.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.986,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab4\lr4\Unit2.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab4\lr4\opz.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.077,=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab4\lr4\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.492,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab4\lr4\stack.cpp=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\stack.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.399,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab4\lr4\Unit1.dfm=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.986,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab4\lr4\Unit2.cpp=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab4\lr4\opz.cpp</Transaction>
+    <Transaction>2019.04.12 10:09:49.774,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab4\lr4\opz.cpp=</Transaction>
+  </Transactions>
+</BorlandProject>

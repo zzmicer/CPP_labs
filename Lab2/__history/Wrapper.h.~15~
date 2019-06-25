@@ -1,0 +1,165 @@
+// ---------------------------------------------------------------------------
+
+#ifndef WrapperH
+#define WrapperH
+#include "Student.h"
+
+// ---------------------------------------------------------------------------
+class Wrapper {
+
+public:
+
+	Student *student;
+
+	Wrapper(int n) {
+		student = new Student[n];
+	}
+
+	void SetData(TMemo *Memo1) {
+		student[0].fio = Memo1->Lines->Strings[0];
+		student[0].specialty = Memo1->Lines->Strings[1];
+		student[0].eduform = Memo1->Lines->Strings[2];
+		for (int i = 0; i < 3; i++) {
+			student[0].marks[i] = StrToInt(Memo1->Lines->Strings[3 + i]);
+			student[0].gpa += student[0].marks[i];
+
+		}
+		student[0].gpa /= 3;
+
+	}
+
+	void AddData(TEdit *E1, TEdit *E2, TEdit *E3, TEdit *E4, TEdit *E5,
+		TCheckBox *CB1, TCheckBox *CB2, int n) {
+		Student *tmp = new Student[n + 1];
+		for (int i = 0; i < n; i++) {
+			tmp[i] = student[i];
+
+		}
+		delete[]student;
+		student = tmp;
+
+		student[n].fio = E4->Text;
+		student[n].specialty = E5->Text;
+		if (CB1->Checked)
+			student[n].eduform = "платная";
+		if (CB2->Checked)
+			student[n].eduform = "бюджетная";
+
+		student[n].marks[0] = StrToInt(E1->Text);
+		student[n].marks[1] = StrToInt(E2->Text);
+		student[n].marks[2] = StrToInt(E3->Text);
+		student[n].gpa = 0;s
+		for (int i = 0; i < 3; i++) {
+			student[n].gpa += student[n].marks[i];
+		}
+		student[n].gpa /= 3;
+	}
+
+	void DelData(TEdit *E7, int n) {
+		Student *tmp = new Student[n - 1];
+		bool del = false;
+		for (int i = 0; i < n; i++) {
+
+			if (i == StrToInt(E7->Text) - 1) {
+				del = true;
+				continue;
+			}
+
+			if (del)
+				tmp[i - 1] = student[i];
+			else
+				tmp[i] = student[i];
+		}
+		delete[]student;
+		student = tmp;
+
+	}
+
+	void SortData(TCheckBox* Ch1, TCheckBox* Ch2, int n, TMemo *Memo1) {
+		Student tmp;
+		if (Ch1->Checked) {
+			for (int i = 0; i < n - 1; i++)
+				for (int j = 0; j < n - i - 1; j++) {
+					if ((student[j].gpa < student[j + 1].gpa) &&
+						(student[j].eduform == "платная" && student[j +
+						1].eduform == "платная")) {
+						tmp = student[j];
+						student[j] = student[j + 1];
+						student[j + 1] = tmp;
+					}
+
+				}
+			Memo1->Clear();
+
+			for (int i = 0; i < n; i++) {
+				if (student[i].eduform == "платная") {
+					Memo1->Lines->Add("--- " + IntToStr(i + 1) + " Запись ---");
+					Memo1->Lines->Add(student[i].fio);
+					Memo1->Lines->Add(student[i].specialty);
+					Memo1->Lines->Add(student[i].eduform);
+					Memo1->Lines->Add(student[i].gpa);
+					Memo1->Lines->Add("\n");
+				}
+			}
+
+		}
+		if (Ch2->Checked) {
+			for (int i = 0; i < n - 1; i++)
+				for (int j = 0; j < n - i - 1; j++) {
+					if ((student[j].gpa < student[j + 1].gpa) &&
+						(student[j].eduform == "бюджетная" && student[j +
+						1].eduform == "бюджетная")) {
+						tmp = student[j];
+						student[j] = student[j + 1];
+						student[j + 1] = tmp;
+					}
+
+				}
+			Memo1->Clear();
+
+			for (int i = 0; i < n; i++) {
+				if (student[i].eduform == "бюджетная") {
+					Memo1->Lines->Add("--- " + IntToStr(i + 1) + " Запись ---");
+					Memo1->Lines->Add(student[i].fio);
+					Memo1->Lines->Add(student[i].specialty);
+					Memo1->Lines->Add(student[i].eduform);
+					Memo1->Lines->Add(student[i].gpa);
+					Memo1->Lines->Add("\n");
+				}
+			}
+
+		}
+
+	}
+
+	void ShowData(int n, TMemo *Memo1) {
+		Memo1->Clear();
+		for (int i = 0; i < n; i++) {
+			Memo1->Lines->Add("--- " + IntToStr(i + 1) + " Запись ---");
+			Memo1->Lines->Add(student[i].fio);
+			Memo1->Lines->Add(student[i].specialty);
+			Memo1->Lines->Add(student[i].eduform);
+			Memo1->Lines->Add(student[i].gpa);
+			Memo1->Lines->Add("\n");
+		}
+
+	}
+
+	void ShowStud(TMemo *Memo1, int n) {
+		Memo1->Clear();
+		Memo1->Lines->Add("Студенты отличники(форма обучения - платная): ");
+		for (int i = 0; i < n; i++) {
+			if (student[i].gpa >= 9.0 && student[i].eduform == "платная") {
+				Memo1->Lines->Add("--- " + IntToStr(i + 1) + " Запись ---");
+				Memo1->Lines->Add(student[i].fio);
+				Memo1->Lines->Add(student[i].specialty);
+				Memo1->Lines->Add(student[i].eduform);
+				Memo1->Lines->Add(student[i].gpa);
+				Memo1->Lines->Add("\n");
+			}
+		}
+	}
+
+};
+
+#endif

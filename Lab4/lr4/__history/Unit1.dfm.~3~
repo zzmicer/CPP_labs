@@ -1,0 +1,137 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = #1054#1073#1088#1072#1090#1085#1072#1103' '#1087#1086#1083#1100#1089#1082#1072#1103' '#1079#1072#1087#1080#1089#1100
+  ClientHeight = 300
+  ClientWidth = 587
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 24
+    Top = 8
+    Width = 537
+    Height = 106
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 32
+      Top = 16
+      Width = 195
+      Height = 16
+      Caption = #1048#1085#1092#1080#1082#1089#1085#1072#1103' '#1092#1086#1088#1084#1072' '#1079#1072#1087#1080#1089#1080' '#1095#1080#1089#1083#1072':'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Edit1: TEdit
+      Left = 8
+      Top = 43
+      Width = 521
+      Height = 21
+      TabOrder = 0
+    end
+    object Button1: TButton
+      Left = 288
+      Top = 70
+      Width = 241
+      Height = 25
+      Caption = #1055#1088#1077#1086#1073#1088#1072#1079#1086#1074#1072#1090#1100' '#1074' '#1087#1086#1089#1090#1092#1080#1082#1089#1085#1091#1102' '#1092#1086#1088#1084#1091
+      TabOrder = 1
+      OnClick = Button1Click
+    end
+  end
+  object Panel2: TPanel
+    Left = 24
+    Top = 128
+    Width = 537
+    Height = 89
+    TabOrder = 1
+    object Label2: TLabel
+      Left = 32
+      Top = 7
+      Width = 207
+      Height = 16
+      Caption = #1055#1086#1089#1090#1092#1080#1082#1089#1085#1072#1103' '#1092#1086#1088#1084#1072' '#1079#1072#1087#1080#1089#1080' '#1095#1080#1089#1083#1072':'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Edit2: TEdit
+      Left = 8
+      Top = 29
+      Width = 521
+      Height = 21
+      TabOrder = 0
+    end
+    object Button3: TButton
+      Left = 288
+      Top = 56
+      Width = 241
+      Height = 25
+      Caption = #1055#1088#1077#1086#1073#1088#1072#1079#1086#1074#1072#1090#1100' '#1074' '#1080#1085#1092#1080#1082#1089#1085#1091#1102' '#1092#1086#1088#1084#1091
+      TabOrder = 1
+      OnClick = Button3Click
+    end
+  end
+  object Panel3: TPanel
+    Left = 24
+    Top = 223
+    Width = 537
+    Height = 69
+    TabOrder = 2
+    object Label3: TLabel
+      Left = 8
+      Top = 37
+      Width = 139
+      Height = 16
+      Caption = #1056#1077#1079#1091#1083#1100#1090#1072#1090' '#1074#1099#1095#1080#1089#1083#1077#1085#1080#1103':'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 32
+      Top = 7
+      Width = 296
+      Height = 16
+      Caption = #1042#1099#1095#1080#1089#1083#1077#1085#1080#1077' '#1074' '#1087#1086#1089#1090#1092#1080#1082#1089#1085#1086#1081' '#1092#1086#1088#1084#1077' '#1079#1072#1087#1080#1089#1080' '#1095#1080#1089#1083#1072': '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Edit3: TEdit
+      Left = 153
+      Top = 35
+      Width = 176
+      Height = 21
+      TabOrder = 0
+    end
+    object Button2: TButton
+      Left = 360
+      Top = 12
+      Width = 169
+      Height = 45
+      Caption = #1042#1099#1095#1080#1089#1083#1080#1090#1100' '
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+  end
+end

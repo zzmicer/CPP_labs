@@ -1,0 +1,26 @@
+//---------------------------------------------------------------------------
+
+#ifndef ClassH
+#define ClassH
+//---------------------------------------------------------------------------
+#endif
+#include <iostream>
+using namespace std;
+
+class Calculation {
+	private:
+		wchar_t* infixStr;
+		wchar_t stack[100];
+		int size;
+		int number_in_stack;
+	public:
+		Calculation ();
+		Calculation (wchar_t *str);
+		wchar_t* postfixStr;
+		float result;
+		void push(wchar_t simb);
+		wchar_t pop();
+		wchar_t last_in_stack();
+		void Transformation();
+		void calculate(wchar_t *str);
+};

@@ -1,0 +1,45 @@
+// ---------------------------------------------------------------------------
+
+#ifndef ListH
+#define ListH
+#define NULL 0
+
+// ---------------------------------------------------------------------------
+class Node {
+public:
+	Node *pNext;
+	Node *pPrev;
+	int data;
+	int num;
+
+	Node(int data = int(),int num = int(), Node *pNext = NULL, Node *pPrev = NULL) {
+		this->data = data;
+		this->num = num;
+
+		this->pNext = pNext;
+		this->pPrev = pPrev;
+	}
+};
+
+class List {
+public:
+	List();
+	~List();
+
+public:
+	Node *head;
+	Node *tail;
+	int size;
+
+	void push_back(int data);
+	void pop_front();
+	void pop_index(int index);
+	void push_index(int index, int data);
+	void clear();
+
+	int get_size() {
+		return size;
+	}
+	int &operator[](const int index);
+};
+#endif

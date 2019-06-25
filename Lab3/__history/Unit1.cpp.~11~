@@ -1,0 +1,69 @@
+// ---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "Unit2.h"
+// ---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+List lst;
+
+// ---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner) : TForm(Owner) {
+}
+
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button1Click(TObject *Sender) {
+	Storage *data = new Storage();
+
+	data->set_number(StrToInt(Edit2->Text));
+	data->set_name(Edit4->Text);
+	data->set_price(StrToInt(Edit3->Text));
+
+	lst.push_back(data);
+
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Button4Click(TObject *Sender) {
+
+	Memo1->Clear();
+	for (int i = 0; i < lst.size; i++) {
+		Memo1->Lines->Add(lst[i].get_name());
+		Memo1->Lines->Add(lst[i].get_number());
+		Memo1->Lines->Add(lst[i].get_price());
+		Memo1->Lines->Add('\n');
+
+	}
+
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Button2Click(TObject *Sender) {
+	Memo1->Clear();
+	for (int i = 0; i < lst.size; i++) {
+		if (lst[i].get_name() == Edit1->Text) {
+			Memo1->Lines->Add(lst[i].get_name());
+			Memo1->Lines->Add(lst[i].get_number());
+			Memo1->Lines->Add(lst[i].get_price());
+			Memo1->Lines->Add('\n');
+		}
+
+	}
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Button3Click(TObject *Sender) {
+	for (int i = 0; i < lst.size; i++) {
+		if (lst[i].get_name() == Edit5->Text) {
+			lst.pop_index(i);
+		}
+
+	}
+}
+
+// ---------------------------------------------------------------------------

@@ -1,0 +1,156 @@
+// ---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "hash.h"
+// ---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+
+TForm1 *Form1;
+
+struct pair {
+	int Key;
+	String Data;
+} A;
+
+List<pair>hash_list[10];
+
+// ---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner) : TForm(Owner) {
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Button1Click(TObject *Sender) {
+	for (int i = 0; i < 10; i++) {
+		hash_list[i].clear();
+	}
+	Memo1->Clear();
+	srand(time(0));
+
+	for (int i = 0; i < 10; i++) {
+		A.Key = rand() % 1000;
+		A.Data = IntToStr(rand() % 100);
+		int i = hash_list[0].hash(A.Key);
+		hash_list[i].addInEnd(A);
+	}
+
+	for (int i = 0; i < 10; i++) {
+		Memo1->Lines->Add(IntToStr(i) + " ячейка: ");
+		if (hash_list[i].GetSize() == 0) {
+			Memo1->Lines->Add("пуста");
+		}
+		else {
+			for (int j = 0; j < hash_list[i].GetSize(); j++) {
+				Memo1->Lines->Add("Ключ: " + IntToStr(hash_list[i][j].Key));
+				Memo1->Lines->Add("Значение: " + hash_list[i][j].Data);
+				Memo1->Lines->Add("\n");
+
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Button3Click(TObject *Sender) {
+	try {
+		A.Key = StrToInt(Edit1->Text);
+		A.Data = Edit2->Text;
+		int i = hash_list[0].hash(A.Key);
+		hash_list[i].addInEnd(A);
+	}
+	catch (...) {
+		ShowMessage("Ошибка ввода!");
+	}
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Button5Click(TObject *Sender) {
+	Memo1->Clear();
+	for (int i = 0; i < 10; i++) {
+		Memo1->Lines->Add(IntToStr(i) + " ячейка: ");
+		if (hash_list[i].GetSize() == 0) {
+			Memo1->Lines->Add("пуста");
+		}
+		else {
+			for (int j = 0; j < hash_list[i].GetSize(); j++) {
+				Memo1->Lines->Add("Ключ: " + IntToStr(hash_list[i][j].Key));
+				Memo1->Lines->Add("Значение: " + hash_list[i][j].Data);
+				Memo1->Lines->Add("\n");
+
+			}
+		}
+	}
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button4Click(TObject *Sender) {
+	for (int i = 0; i < 10; i++) {
+		hash_list[i].clear();
+	}
+	Memo1->Clear();
+	Memo2->Clear();
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Button2Click(TObject *Sender) {
+	try {
+		Memo2->Clear();
+		int key = StrToInt(Edit1->Text);
+		int pos = hash_list[0].hash(key);
+		for (int i = 0; i < hash_list[pos].GetSize(); i++) {
+			if (hash_list[pos][i].Key == key) {
+				Memo2->Lines->Add("Элемент с ключом " + IntToStr(key) +
+					" имеет значение: " + hash_list[pos][i].Data);
+				return;
+			}
+			else
+				Memo2->Lines->Add("Прохожу элемент с ключом: " +
+				IntToStr(hash_list[pos][i].Key));
+		}
+		Memo2->Lines->Add("Элемента с ключом " + IntToStr(key) +
+			" не существует!");
+	}
+	catch (...) {
+		ShowMessage("Ошибка ввода!");
+	}
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Button6Click(TObject *Sender) {
+	Memo2->Clear();
+	try {
+		int key = StrToInt(Edit1->Text);
+		int pos = hash_list[0].hash(key);
+		for (int i = 0; i < hash_list[pos].GetSize(); i++) {
+			if (hash_list[pos][i].Key == key) {
+				Memo2->Lines->Add("Удаление элемента с ключом " +
+					IntToStr(key));
+				hash_list[pos].deleteElemet(i);
+				return;
+			}
+			else
+				Memo2->Lines->Add("Прохожу элемент с ключом: " +
+				IntToStr(hash_list[pos][i].Key));
+		}
+		Memo2->Lines->Add("Элемента с ключом " + IntToStr(key) +
+			" не существует!");
+
+	}
+	catch (...) {
+		ShowMessage("Ошибка ввода!");
+	}
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Button7Click(TObject *Sender) {
+	int index_max=0;
+	for (int i = 0; i < 10; i++) {
+	   if(hash_list[i].GetSize()>hash_list[index_max].GetSize())
+        index_max=i;
+
+	}
+}
+// ---------------------------------------------------------------------------

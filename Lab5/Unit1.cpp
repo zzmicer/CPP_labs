@@ -1,0 +1,80 @@
+// ---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "List.h"
+#include <ctime>
+// ---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+List lst;
+Node *current;
+
+// ---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner) : TForm(Owner) {
+}
+
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::BtNext(TObject *Sender) {
+
+	current = current->pNext;
+	Label1->Caption = IntToStr(current->data);
+	Gauge1->Progress = current->num;
+
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::BtPrev(TObject *Sender) {
+	current = current->pPrev;
+	Label1->Caption = IntToStr(current->data);
+	Gauge1->Progress = current->num;
+
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Button3Click(TObject *Sender) {
+	srand(time(0));
+	Timer1->Enabled = true;
+	for (int i = 0; i < 5; i++) {
+		lst.push_back(10 + rand() % 100);
+		ListBox1->Items->Add(IntToStr(lst[i]));
+
+	}
+	current = lst.head;
+	Label1->Caption = IntToStr(current->data);
+	Button3->Enabled = false;
+
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Button4Click(TObject *Sender) {
+	lst.pop_index(current->num);
+	current = lst.head;
+	Label1->Caption = IntToStr(current->data);
+	Gauge1->Progress = 0;
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Timer1Timer(TObject *Sender) {
+	ListBox1->Items->Clear();
+	for (int i = 0; i < lst.size; i++)
+		ListBox1->Items->Add(IntToStr(lst[i]));
+	Gauge1->MaxValue = lst.size;
+}
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Button5Click(TObject *Sender)
+{
+lst.push_back(StrToInt(Edit1->Text));
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button6Click(TObject *Sender)
+{
+lst.push_index(StrToInt(Edit2->Text),StrToInt(Edit3->Text));
+}
+//---------------------------------------------------------------------------
+

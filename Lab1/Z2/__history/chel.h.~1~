@@ -1,0 +1,18 @@
+// ---------------------------------------------------------------------------
+
+#ifndef chelH
+#define chelH
+#include "lift.h"
+// ---------------------------------------------------------------------------
+
+class Man : public Lift {
+	public:
+		void DrawHead(TCanvas *Canvas,int x1, int y1,int x2,int y2,int r){
+		  Canvas->Ellipse(x1+r,y1+r,x2-r,y2-r);
+		}
+		void DrawBody(TCanvas *Canvas,int x1,int y1,int x2,int y2){
+		Canvas->Rectangle(x1,y1,x2,y2);
+		}
+
+};
+#endif

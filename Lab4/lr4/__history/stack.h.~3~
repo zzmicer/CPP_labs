@@ -1,0 +1,17 @@
+//---------------------------------------------------------------------------
+
+#ifndef stackH
+#define stackH
+//---------------------------------------------------------------------------
+template <typename T>
+class Stack
+{
+	public:
+		T data[100];
+		int size;
+		Stack(int i);
+		void Push(T x);
+		T Pop();
+		T Show();
+};
+#endif

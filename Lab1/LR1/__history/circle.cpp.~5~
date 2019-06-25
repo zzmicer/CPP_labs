@@ -1,0 +1,28 @@
+// ---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "circle.h"
+// ---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+circle::circle(int x, int y, int rad) {
+	x0 = x;
+	y0 = y;
+	r = rad;
+}
+
+circle::circle() {
+}
+
+int circle::getr() {
+
+	return r;
+}
+
+void circle::draw(TCanvas *Canvas, int moveX, int moveY) {
+	Canvas->Pen->Color=clBlack;
+	Image1->Canvas->Ellipse(x0 - r + moveX, y0 - r + moveY, x0 + r + moveX,
+		y0 + r + moveY);
+
+}

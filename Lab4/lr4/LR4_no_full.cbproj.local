@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.534,D:\OAIP\Laborotory\2 sem\LR4\Unit1.dfm=C:\Users\Il\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.786,=C:\Users\Il\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.225,D:\OAIP\Laborotory\2 sem\LR4\Class.h=C:\Users\Il\Documents\RAD Studio\Projects\Class.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.752,C:\Users\Il\Documents\RAD Studio\Projects\LR4_no_full.cbproj=C:\Users\Il\Documents\RAD Studio\Projects\LR4.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.868,C:\Users\Il\Documents\RAD Studio\Projects\Class.cpp=C:\Users\Il\Documents\RAD Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.771,=C:\Users\Il\Documents\RAD Studio\Projects\Project15.res</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.534,D:\OAIP\Laborotory\2 sem\LR4\Unit1.h=C:\Users\Il\Documents\RAD Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.868,C:\Users\Il\Documents\RAD Studio\Projects\Class.h=C:\Users\Il\Documents\RAD Studio\Projects\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.055,=C:\Users\Il\Documents\RAD Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.225,D:\OAIP\Laborotory\2 sem\LR4\Class.cpp=C:\Users\Il\Documents\RAD Studio\Projects\Class.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.399,C:\Users\Il\Documents\RAD Studio\Projects\LR4.cbproj=C:\Users\Il\Documents\RAD Studio\Projects\Project15.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.039,D:\OAIP\Laborotory\2 sem\LR4\LR4_no_full.cbproj=C:\Users\Il\Documents\RAD Studio\Projects\LR4_no_full.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.534,D:\OAIP\Laborotory\2 sem\LR4\Unit1.cpp=C:\Users\Il\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+  </Transactions>
+</BorlandProject>

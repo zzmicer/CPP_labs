@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.562,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab5\Project1PCH1.h=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.169,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.592,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\List.cpp=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.080,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab5\Unit1.dfm=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.649,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab5\List.h=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\List.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.779,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.592,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\List.h=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.735,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab5\Project1.cbproj=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.080,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab5\Unit1.cpp=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.649,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab5\List.cpp=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\List.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.040,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.080,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab5\Unit1.h=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,3 @@
+﻿  Source.cpp
+c:\learning\bsuir\2nd term\labs\программирование\lr7\lr7\source.cpp(484): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  LR7.vcxproj -> C:\Learning\BSUIR\2nd term\labs\Программирование\LR7\Debug\LR7.exe

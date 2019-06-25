@@ -1,0 +1,68 @@
+// ---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "lift.h"
+#include "chel.h"
+// ---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+Lift *Lift;
+Man *Man;
+int x1 = 100, x2 = 200, y1 = 380, y2 = 530;
+bool up, down;
+
+// ---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner) : TForm(Owner) {
+	Lift->draw(Image1->Canvas, x1, y1, x2, y2);
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button1Click(TObject *Sender) {
+	Timer1->Enabled = true;
+	up = true;
+	down = false;
+
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::Timer1Timer(TObject *Sender) {
+	if (up) {
+		if (y1 != 10 && y2 != 160) {
+			Lift->clear(Image1->Canvas, x1, y1, x2, y2);
+			y1--;
+			y2--;
+			Lift->draw(Image1->Canvas, x1, y1, x2, y2);
+
+			Button2->Enabled = false;
+		}
+		else {
+			Button2->Enabled = true;
+			Button1->Enabled = false;
+		}
+	}
+	if (down) {
+		if (y1 != 380 && y2 != 530) {
+			Lift->clear(Image1->Canvas, x1, y1, x2, y2);
+			y1++;
+			y2++;
+			Lift->draw(Image1->Canvas, x1, y1, x2, y2);
+		}
+		else {
+			Button1->Enabled = true;
+			Button2->Enabled = false;
+		}
+	}
+
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::Button2Click(TObject *Sender) {
+	up = false;
+	down = true;
+
+}
+// ---------------------------------------------------------------------------

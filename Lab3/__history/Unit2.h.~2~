@@ -1,0 +1,77 @@
+// ---------------------------------------------------------------------------
+
+#ifndef Unit2H
+#define Unit2H
+#include <StdCtrls.hpp>
+// ---------------------------------------------------------------------------
+
+class Storage {
+
+private:
+	int number, price;
+	String name, date;
+
+public:
+
+	void set_number(int number) {
+		this->number = number;
+	}
+
+	int get_number() {
+		return number;
+	}
+
+	void set_price(int price) {
+		this->price = price;
+	}
+
+	int get_price() {
+		return price;
+	}
+
+	void set_name(String name) {
+		this->name = name;
+	}
+
+	String get_name() {
+		return name;
+	}
+
+	void set_date(String date) {
+		this->date = date;
+	}
+
+	String get_date() {
+		return date;
+	}
+};
+
+class List {
+public:
+	List();
+
+private:
+	class Node {
+	public:
+		Node *pNext;
+		int data;
+
+		Node(int data = int(), Node *pNext = NULL) {
+			this->data = data;
+			this->pNext = pNext;
+		}
+	};
+
+public:
+	Node *head;
+	int size;
+
+	void push_back(int data);
+	void pop_index(int index);
+
+	int get_size() {
+		return size;
+	}
+	int &operator[](const int index);
+};
+#endif

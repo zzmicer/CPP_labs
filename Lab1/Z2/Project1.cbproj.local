@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.565,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Head.cpp=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.619,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\lift.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Unit3.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.231,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.275,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.565,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Head.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.479,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Unit2.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\chel.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.469,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.068,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.469,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.469,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.619,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\lift.cpp=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Unit3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.054,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.897,=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.371,=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Unit3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.479,C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Unit2.cpp=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\chel.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.449,=C:\Learning\BSUIR\2nd term\labs\ОАиП\Lab1\Z2\Unit2.cpp</Transaction>
+  </Transactions>
+</BorlandProject>

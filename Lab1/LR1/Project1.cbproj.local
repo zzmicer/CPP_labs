@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.170,C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit2.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\trianglecpp.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.793,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.498,C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit2.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\circle.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.778,C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit2.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\shape.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.334,C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit2.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\square.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.638,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.793,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.113,C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\trianglecpp.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\triangle.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.666,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.782,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.104,C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\triangle.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.325,=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.170,C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit2.cpp=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\trianglecpp.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.498,C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit2.cpp=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\circle.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.845,=C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.793,C:\Users\Dmitry\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.941,=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.778,C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit2.cpp=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\shape.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.113,C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\trianglecpp.cpp=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\triangle.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.334,C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit2.cpp=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\square.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.013,=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.818,=C:\Learning\BSUIR\2nd term\labs\ОАиП\LR1\Unit2.cpp</Transaction>
+  </Transactions>
+</BorlandProject>

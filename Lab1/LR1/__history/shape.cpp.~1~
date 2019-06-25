@@ -1,0 +1,13 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "shape.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+int shape::getxCo(){
+	return xCo;
+}
+int shape::getyCo(){
+	return yCo;
+}

@@ -1,0 +1,24 @@
+// ---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "circle.h"
+// ---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+circle::circle(int x, int y, int rad) {
+	x0 = x;
+	y0 = y;
+	r = rad;
+}
+
+circle::circle() {
+}
+
+int circle::getr() {
+
+	return r;
+}
+void circle::draw(TImage *Image1){
+
+}

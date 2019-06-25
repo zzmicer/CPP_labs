@@ -1,0 +1,249 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Class.h"
+
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+Calculation :: Calculation (){}
+
+Calculation :: Calculation (wchar_t *str){
+	number_in_stack = 0;
+	int i = 0;
+	while(i <= 100){
+		stack[i++] = ' ';
+	}
+	size = sizeof(str)/sizeof(wchar_t);
+	infixStr = new wchar_t[size];
+	postfixStr = new wchar_t[size];
+	for (int i = 0; i <= size; i++) {
+		infixStr[i] = str[i];
+	}
+}
+
+void Calculation :: push_in_stack(wchar_t simb) {
+	stack[number_in_stack++] = simb;
+}
+
+wchar_t Calculation :: last_in_stack(){
+	return stack[--number_in_stack];
+}
+
+/*void Calculation :: Transfer(){
+	int out_index = 0;
+	int in_index = 0;
+	do {
+		wchar_t simb = infixStr[in_index];
+		switch (simb) {
+			case '+':
+			case '-': {
+				while(number_in_stack != 0) {
+					wchar_t oper = stack[number_in_stack - 1];
+					if (oper != '(' ) {
+						postfixStr[out_index++] = oper;
+						last_in_stack();
+					}
+					else {
+						break;
+                    }
+				}
+				push_in_stack(simb);
+			} break;
+			case '*':
+			case '/': {
+				while(number_in_stack != 0) {
+					wchar_t oper = stack[number_in_stack - 1];
+					if ((oper == '^') || (oper == '*') || (oper == '/')) {
+						postfixStr[out_index++] = oper;
+						last_in_stack();
+					}
+					else {
+						break;
+                    }
+				}
+				push_in_stack(simb);
+			} break;
+			case '(': {
+				push_in_stack(simb);
+			} break;
+			case ')': {
+				while (number_in_stack != 0) {
+					wchar_t oper = last_in_stack();
+					if (oper == '(') {
+						break;
+					}
+					else {
+						postfixStr[out_index++] = oper;
+					}
+				}
+			} break;
+			case '^': {
+				push_in_stack(simb);
+			} break;
+			default: {
+				postfixStr[out_index++] = simb;
+
+			} break;
+		}
+		in_index++;
+	} while(infixStr[in_index] != 0);
+
+	while (number_in_stack != 0) {
+		postfixStr[out_index++] = last_in_stack();
+	}
+
+	postfixStr[out_index] = 0;
+
+} */
+
+void Calculation :: Transfer(){
+	int out_index = 0;		// индекс в выходной строке
+	int in_index = 0;		// индекс во входной строке
+
+	// начинаем разбор входящей строки (она не должна быть пустой)
+	do
+	{
+		char c = infixStr[in_index];	// берем текущий символ входной строки
+
+		switch (c)
+		{
+			case '+':
+			case '-':
+				// выталкиваем из стека в выходную строку все операторы с большим или равным приоритетом
+				while (number_in_stack != 0)
+				{
+					char op = stack[number_in_stack-1];	// оператор в вершине стека
+					if (op != '(')	// все операторы, кроме откр. скобки имеют больший или равный приоритет
+					{
+						postfixStr[out_index++] = op;	// добавляем оператор в выходную строку
+						last_in_stack();			// удаляем оператор из стека
+					}
+					else
+						break;
+				}
+				// помещаем оператор в стек
+				push_in_stack(c);
+				break;
+
+			case '*':
+			case '/':
+				// выталкиваем из стека в выходную строку все операторы с большим или равным приоритетом
+				while (number_in_stack != 0)
+				{
+					char op = stack[number_in_stack-1];
+					if ((op == '^') || (op == '*') || (op == '/'))
+					{
+						postfixStr[out_index++] = op;	// добавляем оператор в выходную строку
+						last_in_stack();			// удаляем оператор из стека
+					}
+					else
+						break;
+				}
+				// помещаем оператор в стек
+				push_in_stack(c);
+				break;
+
+			case '(':
+				// просто помещаем в стек
+				push_in_stack(c);
+				break;
+
+			case ')':
+				// выталкиваем из стека в выходную строку все элементы до открывающей скобки (откр. скобку просто отбрасываем)
+				while (number_in_stack != 0)
+				{
+					char op = last_in_stack();	// забираем из стека оператор
+					if (op == '(')					// если достигли открывающей скобки
+						break;						// выталкивание закончили
+					else
+					{
+						postfixStr[out_index++] = op;	// добавили оператор в выходную строку
+					}
+				}
+				break;
+
+			case '^':
+				// помещаем оператор в стек (выталкивать ничего не нужно, нет операторов с большим приоритетом)
+				push_in_stack(c);
+				break;
+
+			default:		// символ цифры
+				postfixStr[out_index] = c;	// добавляем цифру в выходную строку
+				out_index++;
+				break;
+		}
+
+		in_index++;	// переходим к следующему символу входной строки
+	}
+	while (infixStr[in_index] != 0);	// разбор закончен
+
+	// выталкиваем все операторы в выходную строку
+	while(number_in_stack != 0)
+		postfixStr[out_index++] = last_in_stack();
+
+	// завершающий символ нуля
+	postfixStr[out_index] = 0;
+}
+void Calculation :: fullCalculation(){
+	int in_index = 0;
+	int out_index = 0;
+	number_in_stack = 0;
+	int first_numb, two_numb;
+	do {
+		char c = postfixStr[in_index];
+		switch(c)
+		{
+			char one,two;
+			case '+':
+				one = last_in_stack();
+				two = last_in_stack();
+				first_numb = atoi(&one);
+				two_numb = atoi(&two);
+				push_in_stack((char)(two_numb + first_numb));
+				break;
+			case '-':
+				one = last_in_stack();
+				two = last_in_stack();
+				first_numb = atoi(&one);
+				two_numb = atoi(&two);
+				push_in_stack((char)(two_numb - first_numb));
+				break;
+			case '*':
+				one = last_in_stack();
+				two = last_in_stack();
+				first_numb = atoi(&one);
+				two_numb = atoi(&two);
+				push_in_stack((char)(two_numb * first_numb));
+				break;
+			case '/':
+				one = last_in_stack();
+				two = last_in_stack();
+				first_numb = atoi(&one);
+				two_numb = atoi(&two);
+				push_in_stack((char)(two_numb / first_numb));
+				break;
+			case '^':
+				one = last_in_stack();
+				two = last_in_stack();
+				first_numb = atoi(&one);
+				two_numb = atoi(&two);
+				push_in_stack((char)(two_numb ^ first_numb));
+				break;
+			default:
+				push_in_stack(c);
+				break;
+		}
+		in_index++;
+	}while(postfixStr[in_index] != 0);
+
+	while(number_in_stack != 0)
+	{
+		result[out_index++] = last_in_stack();
+	}
+	result[out_index] = 0;
+}

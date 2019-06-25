@@ -1,0 +1,23 @@
+// ---------------------------------------------------------------------------
+
+#ifndef circleH
+#define circleH
+#include "shape.h"
+#include "math.h"
+
+
+// ---------------------------------------------------------------------------
+#endif
+
+class circle : public shape {
+private:
+	int r;
+
+public:
+
+	circle(int, int, int);
+	circle();
+
+	void draw(TImage *Image1);
+
+};

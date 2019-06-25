@@ -1,0 +1,30 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "Class.h"
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+Calculation *Calc;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+	String str = Edit1->Text;
+	wchar_t *per = str.c_str();
+	Calc = new Calculation(per);
+	Calc->Transfer();
+	Edit2->Text = Calc->postfixStr;
+	//Edit3->Text = Calc->result;
+}
+
+//---------------------------------------------------------------------------

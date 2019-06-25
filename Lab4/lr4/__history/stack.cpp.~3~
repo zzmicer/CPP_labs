@@ -1,0 +1,42 @@
+// ---------------------------------------------------------------------------
+
+#pragma hdrstop
+#include <vcl.h>
+#include "stack.h"
+// ---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+template<typename T>
+Stack<T>::Stack(int i) {
+	size = i;
+}
+
+template<typename T>
+void Stack<T>::Push(T x) {
+	if (size == 100) {
+		Application->MessageBox(String("Некорректный ввод. Стек переполнен")
+			.w_str(), String("Ошибка").w_str(), MB_OK);
+		return;
+	}
+	data[size] = x;
+	size++;
+}
+
+template<typename T>
+T Stack<T>::Pop() {
+	if (size == 0) {
+		Application->MessageBox(String("Некорректный ввод. Стек пуст").w_str(),
+			String("Ошибка").w_str(), MB_OK);
+		return 'q';
+	}
+	size--;
+	return data[size];
+}
+
+template<typename T>
+T Stack<T>::Show() {
+	if (size == 0) {
+		return 'x';
+	}
+	return data[size - 1];
+}

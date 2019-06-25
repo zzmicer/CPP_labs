@@ -1,0 +1,41 @@
+// ---------------------------------------------------------------------------
+
+#ifndef StudentH
+#define StudentH
+#include <cstring>
+#include <StdCtrls.hpp>
+#include <stdlib.h>
+// ---------------------------------------------------------------------------
+#endif
+
+class Student {
+	String specialty, fio, eduform;
+	float gpa;
+
+public:
+
+	void SetSpecialty(String Specialty) {
+		specialty = Specialty;
+	}
+
+	String GetSpecialty() {
+		return specialty;
+	}
+
+	void SetFio(String Fio) {
+		fio = Fio;
+	}
+
+	String GetFio() {
+		return fio;
+	}
+
+	void SetEduform(String Eduform) {
+		eduform = Eduform;
+	}
+
+	String GetEduform() {
+		return eduform;
+	}
+
+};

@@ -1,0 +1,16 @@
+// ---------------------------------------------------------------------------
+
+#ifndef shapeH
+#define shapeH
+// ---------------------------------------------------------------------------
+#endif
+
+class shape {
+protected:
+	int xCo, yCo;
+	float p, s;
+
+public:
+	int getxCo();
+	int getyCo();
+};

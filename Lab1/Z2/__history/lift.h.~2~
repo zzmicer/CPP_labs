@@ -1,0 +1,30 @@
+// ---------------------------------------------------------------------------
+
+#ifndef liftH
+#define liftH
+#include <vcl.h>
+// ---------------------------------------------------------------------------
+
+class Lift {
+public:
+	int x1, y1, x2, y2;
+
+	Lift();
+
+	void draw(TCanvas *Canvas, int x1, int y1, int x2, int y2) {
+		Canvas->Pen->Color = clBlack;
+		Canvas->Rectangle(x1, y1, x2, y2);
+	}
+
+	void move(int y1, int y2) {
+		y1 += 5;
+		y2 += 5;
+	}
+
+	void clear(TCanvas *Canvas, int x1, int y1, int x2, int y2) {
+		Canvas->Pen->Color = clWhite;
+		Canvas->Rectangle(x1, y1, x2, y2);
+	}
+};
+
+#endif

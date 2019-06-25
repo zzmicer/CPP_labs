@@ -1,0 +1,35 @@
+//---------------------------------------------------------------------------
+
+#ifndef hashH
+#define hashH
+//---------------------------------------------------------------------------
+#endif
+class List {
+public:
+	List();
+	~List();
+
+private:
+	class Node {
+	public:
+		Node *pNext;
+		int data;
+
+		Node(int data = int(), Node *pNext = NULL) {
+			this->data = data;
+			this->pNext = pNext;
+		}
+	};
+
+public:
+	Node *head;
+	int size;
+
+	void pop_index(int index);
+    void push_front(int data);
+
+	int get_size() {
+		return size;
+	}
+	int &operator[](const int index);
+};

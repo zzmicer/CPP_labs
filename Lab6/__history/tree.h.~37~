@@ -1,0 +1,94 @@
+// ---------------------------------------------------------------------------
+#include <vcl.h>
+#ifndef treeH
+#define treeH
+#include "Unit1.h"
+// ---------------------------------------------------------------------------
+
+class Tree {
+protected:
+	struct Node {
+		int key;
+		String data;
+		Node *Left, *Right;
+		int level;
+	};
+
+public:
+	Node *root;
+	int size;
+
+	Tree();
+	~Tree();
+
+	void add(int key, String data, Node **root, int level);
+	void preOrder(Node *root);
+	void postOrder(Node *root);
+	void inOrder(Node *root);
+	void print(Node *root);
+	void viewTree(Node *root, int lv);
+	void search(int key, Node *root);
+	int arrayFill(Node *root, int *key, String *data, int j);
+	void rebuildTree(int left, int right, int *key, String *data);
+	void balance();
+
+	Node* del(Node *root, int key) {
+		if (root == NULL)
+			return root;
+		if (key == root->key) {
+			Node *temp;
+			if (root->Right == NULL) {
+				temp = root->Left;
+			}
+			else {
+				Node* ptr = root->Right; // правое поддерево
+				if (ptr->Left == NULL) {
+					ptr->Left = root->Left;
+					temp = ptr;
+				}
+				else {
+					Node* pmin = ptr->Left;
+					int count;
+					while (pmin->Left != NULL) {
+						ptr = pmin; // родитель
+						pmin = ptr->Left; // самый левый(минимальный) элемент
+					}
+					++count;
+					ptr->Left = pmin->Right;
+					pmin->Left = root->Left;
+					pmin->Right = root->Right;
+					temp = pmin;
+				}
+			}
+			if (root == this->root) {
+				this->root = temp;
+			}
+			delete root;
+			return temp;
+		}
+		else if (key < root->key) {
+			root->Left = del(root->Left, key);
+		}
+		else
+			root->Right = del(root->Right, key);
+		return root;
+	}
+
+	int NodeCount(Node * node) {
+		if (node->leftChild == NULL && node->rightChild == NULL)
+			return 1;
+		int left, right;
+		if (node->leftChild != NULL)
+			left = NodeCount(node->leftChild);
+		else
+			left = 0;
+		if (node->rightChild != NULL)
+			right = NodeCount(node->rightChild);
+		else
+			right = 0;
+
+		return left + right + 1;
+	}
+
+};
+#endif

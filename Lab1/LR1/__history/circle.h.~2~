@@ -1,0 +1,18 @@
+// ---------------------------------------------------------------------------
+
+#ifndef circleH
+#define circleH
+#include "shape.h"
+#include "math.h"
+// ---------------------------------------------------------------------------
+#endif
+
+class circ : public fig {
+public:
+	circ();
+	circ(int, int, int);
+	void show(TCanvas *Canvas);
+	void clear(TCanvas *Canvas);
+	int getr();
+
+};
